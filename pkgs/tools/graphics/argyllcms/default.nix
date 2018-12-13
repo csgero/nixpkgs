@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     curlOpts = "--user-agent 'Mozilla/5.0'";
   };
 
-  patches = [ ./gcc5.patch ];
+  patches = [ ./gcc5.patch ./udev-hwdb.patch];
 
   # The contents of this file comes from the Jamtop file from the
   # root of the ArgyllCMS distribution, rewritten to pick up Nixpkgs
@@ -66,7 +66,7 @@ stdenv.mkDerivation rec {
     ZLIB = ;
     ZINC = ;
     HAVE_Z = true ;
-
+    
     SSLLIB = ;
     SSLINC = ;
     HAVE_SSL = true ;
